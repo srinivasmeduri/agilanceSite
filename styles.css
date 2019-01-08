@@ -1,0 +1,749 @@
+    /* nav bar styles */
+    .navbar-fixed-top {
+        top: 0;
+        background-color: #2200db;
+    }
+
+    .navbar-brand {
+        font-size: 36px;
+        color: #31fa01;
+        width: 70%;
+        text-align: center;
+        padding-bottom: 60px;
+        line-height: 25px;
+        padding-top: 16px;        
+    }
+    .navbar-brand:hover {
+        color: #e3092a;
+    }
+
+    .navbar-nav {
+        float: right;
+        margin: 1px;
+        padding-right: 5%;
+    }
+
+    .navbar-nav > li > a {
+        color: #ffffff;
+        font-size: 20px;
+        font-family: 'Share Tech Mono', monospace;
+        text-transform: uppercase;
+        margin-left: 20px;
+        font-weight:500; 
+        margin-top: 15px;
+    }
+
+    .navbar-nav > li > a:hover {
+        color: #0310b2;
+        background-color: #ffffff;
+    }
+
+    .navbar-toggle {
+        border: 1px solid blue;
+    }
+
+    /*intro images*/
+
+    #intro .introimg1 {
+        text-align: center;
+        position: absolute;
+        top: 34%;
+        left: 26%;
+        font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+        font-size: 24px;
+    }
+
+    #intro .introimg2 {
+        text-align: center;
+        position: absolute;
+        top: 33%;
+        left: 25%;
+        font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+        font-size: 24px;
+    }
+
+    #intro h2 {
+        color: #fff;
+        margin-bottom: 30px;
+        font-size: 270%;
+        font-weight: 700;
+        padding: 2px 7px 0px 7px;
+        margin-bottom: 0%; 
+    }
+
+    #intro p {
+        color: #fff;
+        width: 60%;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+        margin: 0 auto 3px auto;
+        font-size: 110%;
+        text-align: center;
+        padding: 0px 5px 2px 5px;
+    }
+
+    /* #intro p:hover {
+        border
+    }*/
+
+    /*    3d carousel    */
+.container1{
+	margin: 4% auto;
+	width: 210px;
+	height: 140px;
+	position: relative;
+	perspective: 1000px;
+}
+#carousel1{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+#carousel1:hover{
+	animation-play-state: paused;
+}
+#carousel1 figure{
+	display: block;
+	position: absolute;
+	width: 90%;
+	height: 50%px;
+	left: 10px;
+	top: 10px;
+	background: black;
+	overflow: hidden;
+	border: solid 5px black;
+}
+#carousel1 figure:nth-child(1) {transform: rotateY(0deg) translateZ(288px);}
+#carousel1 figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel1 figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel1 figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel1 figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel1 figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel1 figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel1 figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel1 figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+img3d{
+	-webkit-filter: grayscale(1);
+	cursor: pointer;
+	transition: all .5s ease;
+}
+img3d:hover{
+	-webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+} 
+
+      /*    3d  carousel end*/
+
+         /*    SLIDES BAR    */
+/*Now the styles*/
+
+/*Time to apply widths for accordian to work
+Width of image = 640px
+total images = 5
+so width of hovered image = 640px
+width of un-hovered image = 40px - you can set this to anything
+so total container width = 640 + 40*4 = 800px;
+default width = 800/5 = 160px;
+*/
+
+.accordian {
+	width: 805px; height: 320px;
+	overflow: hidden;
+	
+	/*Time for some styling*/
+	margin: 100px auto;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+	width: 1200px;
+	/*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+	position: relative;
+	display: block;
+	width: 160px;
+	float: left;
+	
+	border-left: 1px solid #888;
+	
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	
+	/*Transitions to give animation effect*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	/*If you hover on the images now you should be able to 
+	see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {width: 40px;}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {width: 600px;}
+
+
+.accordian li img {
+	display: block;
+}
+
+
+/*    SLEDES END    */
+
+
+    /*  products  */
+.productheading {
+    text-align: center;
+    color: #000; 
+    background-color: #c93838;
+    padding-top: 1px;
+    padding-bottom:0px;
+    margin-top: -20px;
+}
+#products h1 {
+    font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+    font-size: 38px;
+}
+    .productimg1, .productimg2 {
+       box-shadow: 5px 10px 12px 0px #000000, 11px 15px 25px 0px #330505;
+        margin-top: 10px;   
+        margin-bottom: 15px;
+}
+
+ .product1, .product2 {
+     border: 1px solid #0ff2c6;
+     background-color: #fff;
+     box-shadow: 5px 10px 12px 0px #000000, 11px 15px 25px 0px #330505;
+}
+.productheading h1 {
+    margin-top: 5%;
+}
+ #products p {
+    text-align: justify;
+    clear: both;
+}
+
+ /*      servises      */
+
+#services {
+    background-color:rgb(8, 255, 236);
+    color:#000;
+    font-size: 110%;
+    text-align: center;
+}
+.container .serviceheading p {
+    text-align: center;
+    font-size: 130%;
+    width:60%;
+    margin-left: 20%;
+}
+#services .serviceheading {
+    font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+}
+.serviceheading {
+    margin-top: 5%;
+    
+    
+   
+}
+.servicecontent1 {
+    margin-top: 0%;
+     box-shadow: 5px 10px 12px 0px #000000, 11px 15px 25px 0px #140303;
+}
+.servicecontent2 {
+    margin-top: 3%;
+     box-shadow: 5px 10px 12px 0px #000000, 11px 15px 25px 0px #140303;
+   
+}
+.servicecontent3 {
+    margin-top: 3%;
+     box-shadow: 5px 10px 12px 0px #000000, 11px 15px 25px 0px #140303;
+}
+
+.serviceimg1, .serviceimg2, .serviceimg3 {
+     box-shadow:0px 0px 5px 0px #000000, 11px 15px 25px 0px #140303;
+    margin-bottom: 15px;
+}
+.servicetext {
+    text-align: justify;
+    margin-top: 10%; 
+}
+.servicetext1 {
+    text-align: justify;
+    margin-top: 10%; 
+}
+  #services .serviceweb {
+     font-size: 160%;
+    color: #ffb204;  
+    }
+
+.servicetext h4 {
+    font-size: 160%;
+    color: #ffb204;
+}
+
+     /*  TEAM   */
+
+#team {
+    padding-top: 5%;
+    background-color: #0aa1ff;
+    color: white;
+}
+
+#team .syam1 {
+        padding-left: 40%;
+} 
+
+#team .sharif1 {
+        padding-left: 33%;
+} 
+
+#team .malik1   {
+    padding-left: 45%;
+}
+
+#team .syam2 {
+    padding-left: 43%;
+}
+
+#team .sharif2 {
+    padding-left: 15%;
+    width:100%;
+}
+
+#team .malik2 {
+    padding-left: 19% ;
+    width: 100% ;
+}
+
+.teamalign {
+    margin-left: 6%;
+}
+
+#team .teamheading { 
+    font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+    font-size: 38px;
+    text-align: center;
+    padding-right: 50%;
+}
+
+#team p {
+    font-size: 120%;
+    text-align: center;
+    width: 60%;
+    margin-left: -4%;
+    padding-bottom: 1%;
+}
+
+  /*  Careers  */
+
+#career {
+    padding-top: 5%;
+    background-color: orange;
+}
+
+#career h1 {
+    margin-top: 20px;
+    text-align: center;
+    color:#fff;
+    font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+    font-size: 38px;
+    text-align: center;
+}
+
+#career p  {
+    text-align: center;
+    color: #fff;
+}
+
+     /*  ABOUT US  */
+
+#about {
+    background-color: black;
+    color: white;
+    padding-top: 5%;
+}
+#about img {
+    margin-left: 16%;
+    margin-top: 8%;
+}
+
+#about .aboutheading {
+    font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+    font-size: 38px;
+    text-align: center;
+}
+#about h2 {
+    text-align: center;
+    color: #fdf400;
+    margin-top: 10%;
+}
+
+#about p {
+    color: #00eff8;
+    margin-top: 3%;
+}
+
+#about h4 {
+    text-align: center;
+    color: #0cf0b3;
+}
+
+#about .contentabout{
+    margin-top: 2%;
+}
+
+.aboutheadline {
+    text-align: center;
+}
+
+       /*   CONTACT    */
+
+#contact {
+    background-color: #f0490c;
+    color: #fff;
+    padding-top: 3%;
+}
+#contact h1 {
+    text-align: center;
+    font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+    font-size: 38px;
+}
+
+.contactline {
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+    color: #06de9c;
+}
+
+/*   FOOTER   */
+#footer {
+        background-color: #ea0c0c;
+}
+
+.footer {
+    text-align: center;
+    color: white;
+    font-size: 80%;
+    padding-top: 5px;
+}
+
+.sendbutton {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    float: right;
+}
+
+.row input:hover {
+    border:2px solid #02367e;
+    color: black;
+}
+   
+        /*      RESPONSIVE     */
+        /*      RESPONSIVE     */
+
+@media only screen and (max-width: 960px) {
+   
+    /*      NAV  BAR   */
+    
+    .navbar-fixed-top {
+        top: 0;
+        background-color: #70737b;
+    }
+    .navbar-brand {
+        font-size: 22px;
+        color: #31fa01;
+        width: 50%;
+        padding-bottom: 10px;
+        line-height: 20px;
+        padding-top: 20px;        
+    }
+    .navbar-nav > li > a {
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'Share Tech Mono', monospace;
+        text-transform: uppercase;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-weight:500; 
+        margin-top: 30px;
+        padding-top: 0px;
+        padding-bottom: 15px;
+            
+    }
+    .navbar-nav {
+        float: right;
+        margin-top: 0px;
+        padding-right: 3%;
+        margin-bottom: 1%;
+    }
+ .productimg1, .productimg2 {
+       box-shadow: 5px 10px 12px 0px #000000, 11px 15px 25px 0px #330505;
+    /* margin-left: -50%;*/
+        margin-top: 10px;   
+        margin-bottom: 15px;
+}
+
+ .product1, .product2 {
+     border: 1px solid #0ff2c6;
+     background-color: #fff;
+     box-shadow: 5px 10px 12px 0px #000000, 11px 15px 25px 0px #330505;
+     margin-left: 0%;
+     width: 100%;
+}
+.productheading h1 {
+    margin-top: 10%;
+}
+ #products p {
+    text-align: justify;
+}
+    
+    /*    OUR TEAM    */
+    
+    #team .teamheading {
+        text-align: center;
+        margin-left: 25%;
+        width:100%;
+        padding-top: 4%;
+    }
+    #team .teamdescription {
+        text-align: center;
+        margin-left: 1%;
+        width: 100%;
+    }
+#team .syam1 {
+    padding-left: 65%;
+    
+} 
+
+#team .sharif1 {
+    margin-left: 47%;
+    width: 100%;
+    padding-left: 0px;
+} 
+
+#team .malik1   {
+    padding-left: 115px;
+}
+
+#team .syam2 {
+    padding-left: 66%;
+}
+
+#team .sharif2 {
+    margin-left: 33%;
+    padding-left: 0%;
+    width: 100%;
+}
+
+#team .malik2 {
+    padding-left: 72%;
+    
+}
+#team img {
+        width: 100%;
+        height: auto;
+        margin-left: 30%;
+        margin-right:10%;
+        display: block;
+    }
+    
+    /*      CAREER    */
+    #career {
+       padding-top: 7%; 
+    }
+    
+    /*     ABOUT    */
+    #about {
+        padding-top: 7%;
+    }    
+    
+}
+
+  /*     MAX WIDTH     */
+
+@media only screen and (max-width: 500px) {
+       
+    /*   NAV  - BAR   */
+    .navbar-fixed-top {
+        top: 0;
+        background-color: #70737b;
+    }
+    .navbar-brand {
+        font-size: 24px;
+        color: #31fa01;
+        width: 50%;
+        padding-bottom: 35px;
+        line-height: 25px;
+        padding-top: 16px;        
+    }
+    
+        /*    INTRO   */
+    #intro .introimg1 {
+        text-align: center;
+        position: absolute;
+        top: 18%;
+        left: 0%;
+        font-size: 12px;
+        margin-top: -10px;
+    }
+
+    #intro .introimg2 {
+        text-align: center;
+        position: absolute;
+        top: 18%;
+        left: 0%;
+        font-size: 12px;
+    }
+    
+    /*  PRODUCTS   */
+    .productheading {
+    text-align: center;
+    color: #ffffff; 
+    background-color: #c93838;
+    padding-top: 9%;
+        
+/*
+    padding-bottom:10px;
+*/
+    margin-top: -20px;
+    }
+    
+     .product1, .product2 {
+        border:none;
+} 
+    .productimg1, .productimg2 {
+       max-width: 100%;
+    }
+    
+    .productheading h2 {
+    margin-top: 5%;
+}
+    
+    #products p {
+     text-align: justify;
+     font-size: 14px;
+}
+    
+    /*   SERVICES    */
+    #services {
+        padding-top: 5%;
+    }
+    .servicecontent1 {
+    margin-top: 0%;
+    box-shadow:none;
+}
+.servicecontent2 {
+    margin-top: 3%;  
+   box-shadow:none;
+   
+}
+.servicecontent3 {
+    margin-top: 3%;
+   box-shadow:none;
+}
+
+.serviceimg1, .serviceimg2, .serviceimg3 {
+    margin-bottom: 15px;
+    box-shadow:none;
+}
+       
+    /*   TEAM*/
+    #team .teamheading {
+        text-align: center;
+        padding-left: 0px;
+        padding-top: 4%
+    }
+    #team .teamdescription {
+        text-align: center;
+        padding-left: 20px;
+        width: 100%;
+    }
+#team .syam1 {
+    padding-left: 110px;
+} 
+
+#team .sharif1 {
+    padding-left: 88px;
+} 
+
+#team .malik1   {
+    padding-left: 115px;
+}
+
+#team .syam2 {
+    padding-left: 118px;
+}
+
+#team .sharif2 {
+    padding-left: 0px;
+}
+
+#team .malik2 {
+    padding-left: 0px;
+    
+}
+#team img {
+        width: 200px;
+        height: auto;
+        margin-left: 10%;
+        margin-right:10%;
+        display: block;
+    }
+    
+    /*   CAREERS    */
+    
+    #career {
+       padding-top: 10%; 
+    }
+    
+    /*   ABOUT US    */
+    
+    #about {
+        padding-top: 5%;
+    }
+    #about .aboutimg {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 300px;
+        height: 350px;
+    }    
+    #about .abouttext2 {
+        font-size:20px;
+    }
+    #about .abouttext3 {
+        font-size: 16px;
+    }
+}
+
+#carousel .item {
+    text-align: center !important;
+}
+
+
+
+
+
+
