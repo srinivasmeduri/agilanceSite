@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Azile Systems</title>
     <meta charset="utf-8" />
@@ -7,18 +8,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
     <!--CSS link-->
     <link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-<link href = "https://fonts.googleapis.com/css?family=Khand:500" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Khand:500" rel="stylesheet">
     @import url(http://fonts.googleapis.com/css?family=Anaheim);
-    </head>
+</head>
 
 <body>
-    
+
     <!-- Navigation -->
-    
+
     <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -29,85 +30,113 @@
                     <span class="icon-bar" style="background-color: aqua;"></span>
                 </button>
                 <!-- Logo text or image -->
-                <a class="navbar-brand" href="index.html">AZILE <small style="font-size: 14px;">SYSTEMS</small></a>
+                <a class="navbar-brand" href="index.html">AZILE <small style="font-size: 14px; letter-spacing: 6px;">SYSTEMS</small></a>
             </div>
-            <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li class="active"><a href="products.html" >Products</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
                     <li><a href="services.html">Service</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="career.html">Careers</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="current active"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
-    </nav> 
-   
+    </nav>
+    <br><br>
+
     <!-- CONTACT -->
 
-    <section id="contact" class="home-section bg-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <div class="section-heading">
-            <h1 class="contactheading">CONTACT US</h1>
-            <div class="heading-line"></div>
-            <p class="contactline"><b>If you have any question or just want to say 'hello' to Agile systems fill out form below and
-              we will be get in touch with you within 24 hours.</b></p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <form action="" method="post" class="form-horizontal contactForm" role="form">
-            <div class="col-md-offset-2 col-md-8">
-              <div class="form-group">
-                   <label>Name:</label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
+    <form id="contact" class="home-section bg-gray">
+        <div class="container">
+            <div class="row">
+                <address class="col-md-6">
+                    <h3 class="addressheading"><b>Address &nbsp;<i class='fas fa-map-marker-alt' style='font-size:28px;color:red'>:</i></b></h3>
+                    <!--<i class='fas fa-map-marker-alt' style='font-size:28px;color:red'>:&nbsp;</i>-->
+                    <span class="addressalign" >Alluri Trade Centre,</span>
+                    OPP: Paradise restaurant,<br>
+                    <span class="addressalign" > 5<sup>th</sup> floor,</span>
+                    Usha Mullapudi Cardio Hospital Rd,<br>
+                    <span class="addressalign"> Venkat Nagar Colony,</span>
+                    Hyderabad,
+                    Telangana 500072.
+                </address>
             </div>
-              
-            <div class="col-md-offset-2 col-md-8">
-              <div class="form-group">
-                   <label>Email:</label>
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"
-                  data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-            </div>
+        </div><br>
+        <div class="container">
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h1 class="contactheading">CONTACT US</h1>
+                        
+                        
+                    </div>
+                </div>
+            </div>-->
+            <!-- <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="form-group">
+                            <label>Email:</label>
+                            <input type="email" class="form-control" name="usremail" id="useremail" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="form-group">
+                            <label>Subject:</label>
+                            <input type="text" class="form-control" name="usrsubject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="form-group">
+                            <label>Message:</label>
+                            <textarea class="form-control" name="usrmessage" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-8">
+                            <button type="submit" class="btn btn-theme btn-lg btn-success sendbutton" name="Submit" id="submit">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
 
-            <div class="col-md-offset-2 col-md-8">
-              <div class="form-group">
-                   <label>Subject:</label>
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4"
-                  data-msg="Please enter at least 8 chars of subject" />
-                <div class="validation"></div>
-              </div>
+            <!-- Do not change the code! -->
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="foxyform">
+                        <a id="foxyform_embed_link_941516" href="http://www.foxyform.com/"></a>
+                        <script type="text/javascript">
+                            (function(d, t) {
+                                var g = d.createElement(t),
+                                    s = d.getElementsByTagName(t)[0];
+                                g.src = "http://www.foxyform.com/js.php?id=941516&sec_hash=255fb7bf239&width=350px";
+                                s.parentNode.insertBefore(g, s);
+                            }(document, "script"));
+                        </script>
+                        <!-- Do not change the code! -->
+                    </div><br>
+                </div>
+                <!--<h1 style="text-align: center; font-family: 'Share Tech Mono', monospace;"> Google Map</h1>-->
+                <br>
+                <iframe class="col-md-offset-1 col-md-6 col-sm-12 col-xs-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.2964649840674!2d78.4016744146788!3d17.493355804345118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91eb2c11aa81%3A0xc534447a7eeca9cb!2sAlluri+Trade+Centre%2C+Usha+Mullapudi+Cardio+Hospital+Rd%2C+Bhagya+Nagar+Colony%2C+Venkat+Nagar+Colony%2C+Hyderabad%2C+Telangana+500072!5e0!3m2!1sen!2sin!4v1547113102672" frameborder="0" style="width: 450px; height: 360px;"></iframe>
             </div>
-                   
-            <div class="col-md-offset-2 col-md-8">
-              <div class="form-group">
-                  <label>Message:</label>
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"
-                  placeholder="Message"></textarea>
-                <div class="validation"></div>
-              </div>
-            </div>
-                
-            <div class="form-group">
-              <div class="col-md-offset-2 col-md-8">
-                <button type="submit" class="btn btn-theme btn-lg btn-success sendbutton">Send message</button>
-              </div>
-            </div>
-          </form>
+            <br>
         </div>
-        </div>
-    </div><br><br>
-  </section>
+    </form>
     <!--    CONTACT ENDS   -->
-    </body>
+</body>
+
 </html>

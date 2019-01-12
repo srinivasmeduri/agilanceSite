@@ -3,15 +3,17 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
-    <!--<meta name="description" value="This carousel starts animating the sizes and margins of the items before it starts scrolling to recreate a 3D roundabout effect." />
-		<meta name="keywords" value="3d, carousel, roundabout, example, margin, sizes" />-->
-
+    <meta name="description" value="This carousel starts animating the sizes and margins of the items before it starts scrolling to recreate a 3D roundabout effect." />
+    <meta name="keywords" value="3d, carousel, roundabout, example, margin, sizes" />
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--
+
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Khand:500" rel="stylesheet">
+    <!--
 
     <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
 -->
@@ -73,15 +75,23 @@
                         data.items.visible.eq(2).animate(_right).css({
                             zIndex: 1
                         });
-                        data.items.visible.eq( 2 ).next().css(_outRight).css({ zIndex: 0 });
+                        data.items.visible.eq(2).next().css(_outRight).css({
+                            zIndex: 0
+                        });
 
                         setTimeout(function() {
-                            data.items.old.eq( 0 ).css({ zIndex: 1 });
-                            data.items.visible.eq( 0 ).css({ zIndex: 2 });
+                            data.items.old.eq(0).css({
+                                zIndex: 1
+                            });
+                            data.items.visible.eq(0).css({
+                                zIndex: 2
+                            });
                             data.items.visible.eq(1).css({
                                 zIndex: 3
                             });
-                            data.items.visible.eq( 2 ).css({ zIndex: 2 });
+                            data.items.visible.eq(2).css({
+                                zIndex: 2
+                            });
                         }, 200);
 
                     }
@@ -146,39 +156,35 @@
                 document.getElementById("Carousel").style.display = "block";
             }, 200);
         });*/
-/*function myFunction() {
-  var x = document.getElementById("Carousel");
-    x.style.display === "none"; }*/
-        
-  /*      function myFunction() {
-  var x = document.getElementById("Carousel");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }*/
-        
-           /* setTimeout(function() {
-                alert("after 200");
-                document.getElementById("Carousel").style.display = "block";
-            }, 10);*/
+        /*function myFunction() {
+          var x = document.getElementById("Carousel");
+            x.style.display === "none"; }*/
 
-                /*function myfunction() {
-                    alert ("i am working");
-                    document.getElementById("Carousel").style.display = none;
-                }*/
-        
-       /* $(document).ready(function() {
+        /*      function myFunction() {
+        var x = document.getElementById("Carousel");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }*/
+
+        /* setTimeout(function() {
+             alert("after 200");
+             document.getElementById("Carousel").style.display = "block";
+         }, 10);*/
+
+        /*function myfunction() {
+            alert ("i am working");
+            document.getElementById("Carousel").style.display = none;
+        }*/
+
+        /* $(document).ready(function() {
     $("#Carousel").hide();
         });*/
-    /*setTimeout(function() {
-                alert("after 200");
-                document.getElementById("Carousel").style.display = "none";
-            }, 10);  */                   
-        
-        
-        
-        
+        /*setTimeout(function() {
+                    alert("after 200");
+                    document.getElementById("Carousel").style.display = "none";
+                }, 10);  */
     </script>
 
     <style type="text/css">
@@ -199,7 +205,7 @@
 				line-height: 22px;
 			}*/
         .wrapper1 {
-            
+
             width: 900px;
             height: 100vh;
             margin: -200px 0 0 -450px;
@@ -207,21 +213,25 @@
             top: 50%;
             left: 50%;
         }
+
         .carousel2 img {
             display: block;
             float: left;
             border: none;
             position: relative;
         }
+
         .producttext {
-            top: 86vh; 
-            margin-left:25%;
-            margin-right: 25%; 
+            top: 86vh;
+            margin-left: 25%;
+            margin-right: 25%;
             font-size: 110%;
         }
+
         #Carousel .producth1 {
             text-align: center;
         }
+
         /*#Carousel .item .p {
             text-align: center !important;
         }*/
@@ -240,12 +250,12 @@
                     <span class="icon-bar" style="background-color: aqua;"></span>
                 </button>
                 <!-- Logo text or image -->
-                <a class="navbar-brand" href="index.html">AZILE <small style="font-size: 14px;">SYSTEMS</small></a>
+                <a class="navbar-brand" href="index.html">AZILE <small style="font-size: 14px; letter-spacing: 6px;">SYSTEMS</small></a>
             </div>
             <div class="navigation collapse navbar-collapse navbar-ex1-  collapse">
                 <ul class="nav navbar-nav">
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li class="active"><a href="products.html" >Products</a></li>
+                    <li ><a href="index.html">Home</a></li>
+                    <li class="current active"><a href="products.html">Products</a></li>
                     <li><a href="services.html">Service</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="career.html">Careers</a></li>
@@ -257,10 +267,10 @@
     </nav>
 
 
-    <div id="wrapper" class="wrapper1" >
+    <div id="wrapper" class="wrapper1">
         <h1 style="text-align: center;">PRODUCTS</h1><br>
         <div id="carousel" class="carousel2">
-    
+
             <img class="img-responsive" src="Images/products/10.jpg" width="600" height="400" />
             <img class="img-responsive" src="Images/products/11.jpg" width="600" height="400" />
             <img class="img-responsive" src="Images/products/12.jpg" width="600" height="400" />
@@ -275,21 +285,21 @@
                 <h1 class=producth1>robot</h1>
                 <p>Robot Cras pulvinar sapien sit amet neque hendrerit finibus. Fusce sit amet augue quis enim auctor ultricies.</p>
                 <p>Cras pulvinar sapien sit amet neque hendrerit finibus. Fusce sit amet augue quis enim auctor ultricies.</p>
-               
+
             </div>
 
             <div class="item">
                 <h1 class="producth1"> bot</h1>
                 <p>Bot Cras pulvinar sapien sit amet neque hendrerit finibus. Fusce sit amet augue quis enim auctor ultricies.</p>
                 <p>Cras pulvinar sapien sit amet neque hendrerit finibus. Fusce sit amet augue quis enim auctor ultricies.</p>
-                
+
             </div>
 
             <div class="item">
                 <h1 class=producth1> Intellegence</h1>
                 <p>Intellegence Cras pulvinar sapien sit amet neque hendrerit finibus. Fusce sit amet augue quis enim auctor ultricies.</p>
                 <p>Cras pulvinar sapien sit amet neque hendrerit finibus. Fusce sit amet augue quis enim auctor ultricies.</p>
-               
+
             </div>
 
             <div class="item">
@@ -306,82 +316,82 @@
 -->
         </div>
     </div>
-    
-    
+
+
     <!--PRODUCTS-->
-     <section id="products">
-    <div class="productheading">
+    <section id="products">
+        <div class="productheading">
             <h1>PRODUCTS</h1>
-        <br>
-        <br>
-        <div class="row col-md-2 col-sm-2"></div>
-        <div class="container">
-            <div class="row">
-                <div class="row col-md-1 col-sm-1"></div>
-                <div class="col-md-4 col-sm-4 product1">
+            <br>
+            <br>
+            <div class="row col-md-2 col-sm-2"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="row col-md-1 col-sm-1"></div>
+                    <div class="col-md-4 col-sm-4 product1">
                         <img src="Images/products/11.jpg" class="productimg1 productimg3" alt="Chart bot" width="360px" height="320px">
-                        <img src="Images/products/1.jpg" class="productimg1 productimg3" alt="Chart bot" width="360px" height="320px"> 
+                        <img src="Images/products/1.jpg" class="productimg1 productimg3" alt="Chart bot" width="360px" height="320px">
                         <img src="Images/products/2.jpg" class="productimg1 productimg3" alt="Chart bot" width="360px" height="320px">
                         <br>
-                    <h4><b>Chart bot</b></h4>
-                    <p>Vivamus pellentesque facilisis sem non placerat. Proin et nibh nulla. Nullam luctus, sem vitae tincidunt interdum, massa sapien posuere massa, vitae congue urna velit ac mauris. <br><br> Nam id augue bibendum, gravida ipsum in, facilisis lectus. Maecenas sed diam magna. Nulla facilisi. Mauris sed lorem nisl. Quisque nec euismod lorem. <br><br>Morbi volutpat feugiat lacinia. Pellentesque et magna eget dui luctus maximus vel sodales massa.</p>
-                    <br>
-                </div>
-                <div class="row col-md-2 col-sm-2"> </div>
-                <div class="col-md-4 col-sm-1 product2">
+                        <h4><b>Chart bot</b></h4>
+                        <p>Vivamus pellentesque facilisis sem non placerat. Proin et nibh nulla. Nullam luctus, sem vitae tincidunt interdum, massa sapien posuere massa, vitae congue urna velit ac mauris. <br><br> Nam id augue bibendum, gravida ipsum in, facilisis lectus. Maecenas sed diam magna. Nulla facilisi. Mauris sed lorem nisl. Quisque nec euismod lorem. <br><br>Morbi volutpat feugiat lacinia. Pellentesque et magna eget dui luctus maximus vel sodales massa.</p>
+                        <br>
+                    </div>
+                    <div class="row col-md-2 col-sm-2"> </div>
+                    <div class="col-md-4 col-sm-1 product2">
                         <img src="Images/products/10.jpg" class="productimg2  productimg" alt="Chart bot" width="360px" height="320px">
                         <img src="Images/products/3.jpg" class="productimg2 productimg" alt="Chart bot" width="360px" height="320px">
                         <img src="Images/products/4.jpg" class="productimg2 productimg" alt="Chart bot" width="360px" height="320px">
-                    <br>
-                    <h4><b>Industrial IOT</b></h4>
-                    <p>Vivamus pellentesque facilisis sem non placerat. Proin et nibh nulla. Nullam luctus, sem vitae tincidunt interdum, massa sapien posuere massa, vitae congue urna velit ac mauris. <br><br> Nam id augue bibendum, gravida ipsum in, facilisis lectus. Maecenas sed diam magna. Nulla facilisi. Mauris sed lorem nisl. Quisque nec euismod lorem. <br><br>Morbi volutpat feugiat lacinia. Pellentesque et magna eget dui luctus maximus vel sodales massa.</p>
-                    <br>
+                        <br>
+                        <h4><b>Industrial IOT</b></h4>
+                        <p>Vivamus pellentesque facilisis sem non placerat. Proin et nibh nulla. Nullam luctus, sem vitae tincidunt interdum, massa sapien posuere massa, vitae congue urna velit ac mauris. <br><br> Nam id augue bibendum, gravida ipsum in, facilisis lectus. Maecenas sed diam magna. Nulla facilisi. Mauris sed lorem nisl. Quisque nec euismod lorem. <br><br>Morbi volutpat feugiat lacinia. Pellentesque et magna eget dui luctus maximus vel sodales massa.</p>
+                        <br>
+                    </div>
                 </div>
+                <br>
             </div>
-            <br>
         </div>
-    </div>
         <!--   script for slides   -->
-         
-          <script>
-    var myIndex = 0;
-    carousel();
 
-    function carousel() {
-        var i;
-        var x = document.getElementsByClassName("productimg3");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {
-            myIndex = 1
-        }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 2000); // Change image every 2 seconds
-    }
-</script>
-          
-<script>
-    var Index = 0;
-    carousel1();
+        <script>
+            var myIndex = 0;
+            carousel();
 
-    function carousel1() {
-        var j;
-        var x = document.getElementsByClassName("productimg");
-        for (j = 0; j < x.length; j++) {
-            x[j].style.display = "none";
-        }
-        Index++;
-        if (Index > x.length) {
-            Index = 1
-        }
-        x[Index - 1].style.display = "block";
-        setTimeout(carousel1, 2000); // Change image every 2 seconds
-    }
-</script>          
-           </section>
-           
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("productimg3");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {
+                    myIndex = 1
+                }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+        <script>
+            var Index = 0;
+            carousel1();
+
+            function carousel1() {
+                var j;
+                var x = document.getElementsByClassName("productimg");
+                for (j = 0; j < x.length; j++) {
+                    x[j].style.display = "none";
+                }
+                Index++;
+                if (Index > x.length) {
+                    Index = 1
+                }
+                x[Index - 1].style.display = "block";
+                setTimeout(carousel1, 2000); // Change image every 2 seconds
+            }
+        </script>
+    </section>
+
     <!--PRODUCTS END-->
 </body>
 
